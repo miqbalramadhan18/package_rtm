@@ -25,11 +25,11 @@ func InsertDataList(db *mongo.Database, Nama_ListRapat, Tanggal_ListRapat string
 }
 
 func GetDataListFromAgenda(Agenda_ListRapat string, db *mongo.Database, col string) (data list_rapat) {
-	agd := db.Collection(col)
+	agdlr := db.Collection(col)
 	filter := bson.M{"agendalistrapat": Agenda_ListRapat}
-	err := agd.FindOne(context.TODO(), filter).Decode(&data)
+	err := agdlr.FindOne(context.TODO(), filter).Decode(&data)
 	if err != nil {
-		fmt.Printf("getdataListbyagd: %v\n", err)
+		fmt.Printf("getdataListbyagdlr: %v\n", err)
 	}
 	return data
 }
