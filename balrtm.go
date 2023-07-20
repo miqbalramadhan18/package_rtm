@@ -49,9 +49,9 @@ func GetDataList(nama_listrapat string, db *mongo.Database, col string) (data []
 }
 
 func DeleteDataList(lokasi_listrapat string, db *mongo.Database, col string) (data list_rapat) {
-	lks := db.Collection(col)
+	lkslr := db.Collection(col)
 	filter := bson.M{"lokasilistrapat": lokasi_listrapat}
-	err, _ := lks.DeleteOne(context.TODO(), filter)
+	err, _ := lkslr.DeleteOne(context.TODO(), filter)
 	if err != nil {
 		fmt.Printf("DeleteDataList : %v\n", err)
 	}
