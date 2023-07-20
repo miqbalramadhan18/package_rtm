@@ -34,7 +34,7 @@ func TestGetDataList(t *testing.T) {
 
 func TestGetDataListFromAganda(t *testing.T) {
 	Agenda_ListRapat := "Pembahasan Proyek"
-	hasil := GetDataListFromAganda(Agenda_ListRapat, MongoConn, "List_Rapat")
+	hasil := GetDataListFromAgenda(Agenda_ListRapat, MongoConn, "List_Rapat")
 	fmt.Println(hasil)
 }
 
