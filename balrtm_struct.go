@@ -1,6 +1,8 @@
 package package_rtm
 
-import "go.mongodb.org/mongo-driver/bson/primitive"
+import (
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
 
 type list_rapat struct {
 	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
